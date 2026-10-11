@@ -1,0 +1,16 @@
+{
+  "name": "linkednav",
+  "description": "LinkedNav: a hosted MCP server for LinkedIn outreach on your own LinkedNav account",
+  "owner": {
+    "name": "LinkedNav",
+    "email": "cynthia@linkednav.com"
+  },
+  "plugins": [
+    {
+      "name": "linkednav",
+      "source": "./",
+      "description": "Find leads from LinkedIn buying signals, launch campaigns, write messages, answer replies and check results, on your own LinkedNav account. Sign in on LinkedNav's connect page. Not made by or affiliated with LinkedIn.",
+      "category": "productivity"
+    }
+  ]
+}

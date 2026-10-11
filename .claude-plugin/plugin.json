@@ -1,0 +1,19 @@
+{
+  "name": "linkednav",
+  "displayName": "LinkedNav",
+  "version": "1.0.0",
+  "description": "A hosted MCP server for your own LinkedNav account. LinkedNav detects LinkedIn buying signals and sends personalized outreach you approve; this puts its outreach tools inside your AI assistant. Sign in on LinkedNav's connect page with your API key. An independent service, not made by or affiliated with LinkedIn.",
+  "author": {
+    "name": "LinkedNav",
+    "email": "cynthia@linkednav.com",
+    "url": "https://www.linkednav.com"
+  },
+  "homepage": "https://www.linkednav.com/mcp?utm_source=plugin&utm_medium=listing",
+  "repository": "https://github.com/linglistack/linkednav-mcp",
+  "license": "MIT",
+  "keywords": ["linkednav", "linkednav mcp", "linkedin outreach", "lead generation"],
+  "icon": "./icon.png",
+  "supportUrl": "https://github.com/linglistack/linkednav-mcp/issues",
+  "privacyPolicyUrl": "https://www.linkednav.com/privacy",
+  "termsOfServiceUrl": "https://www.linkednav.com/terms"
+}

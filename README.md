@@ -43,6 +43,7 @@ Under the hood it gives your assistant tools for:
 claude mcp add --transport http linkednav https://mcp.linkednav.com/ \
   --header "Authorization: Bearer YOUR_KEY"
 ```
+Or install the plugin in this repo, which signs in through your browser. See [The plugin](#the-plugin).
 
 **Claude Desktop or claude.ai:** Settings, then Connectors, then Add custom connector.
 Name it `LinkedNav`, URL `https://mcp.linkednav.com/`, then sign in with your browser
@@ -59,6 +60,41 @@ Name it `LinkedNav`, URL `https://mcp.linkednav.com/`, then sign in with your br
   }
 }
 ```
+
+## The plugin
+
+This repo is also a plugin for Claude Code. It holds two things:
+
+- **The MCP server** `linkednav`, a pointer to `https://mcp.linkednav.com/`
+  ([`.mcp.json`](.mcp.json)). Nothing is downloaded or run on your machine.
+- **The skill** `linkednav` ([`skills/linkednav/SKILL.md`](skills/linkednav/SKILL.md)):
+  how to use the tools well. It tells your assistant to ask you before anything is sent
+  or changed on LinkedIn, and to report what the tools return instead of guessing.
+
+To install it, run these in a terminal:
+
+```bash
+claude plugin marketplace add linglistack/linkednav-mcp
+claude plugin install linkednav@linkednav
+```
+
+Then start Claude Code, run `/mcp`, choose `linkednav`, and sign in. The sign-in opens
+LinkedNav's connect page in your browser, where you paste your API key once.
+
+### Sign-in and network
+
+The plugin connects to `https://mcp.linkednav.com` and reaches nothing else.
+
+- `https://mcp.linkednav.com/`: the MCP server (Streamable HTTP).
+- `https://mcp.linkednav.com/.well-known/oauth-protected-resource` and
+  `/.well-known/oauth-authorization-server`: where your app finds the sign-in.
+- `https://mcp.linkednav.com/register`, `/connect` and `/oauth/token`: the sign-in itself,
+  OAuth with PKCE. Your app registers itself; there is no client secret.
+- `https://mcp.linkednav.com/connect`: the page where you paste your API key.
+
+What it needs from you: a LinkedNav account and an API key from
+[/app/api-keys](https://www.linkednav.com/app/api-keys?utm_source=github&utm_campaign=mcp-registry).
+No key is stored in the plugin, and it has no hooks and no scripts.
 
 ## Pairs with the open-source skill
 

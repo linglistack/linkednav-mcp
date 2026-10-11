@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "linkednav": {
+      "type": "http",
+      "url": "https://mcp.linkednav.com/"
+    }
+  }
+}
