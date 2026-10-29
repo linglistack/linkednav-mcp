@@ -1,5 +1,7 @@
 # LinkedNav MCP
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/linglistack-linkednav-mcp-1poutb?v=6cec32a7ede5c7a9694e71c46076123d)](https://m8ven.ai/mcp/linglistack-linkednav-mcp-1poutb?s=readme)
+
 **Run your LinkedIn outreach from your AI chat.**
 
 LinkedNav MCP connects AI assistants (Claude, Cursor, and any other MCP app) to your
